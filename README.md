@@ -1,3 +1,7 @@
+![岁己SUI](docs/images/sui.png)
+
+关注岁己SUI谢谢喵
+
 # 直播摸鱼 · LiveMoyu
 
 <img src="desktop/app.png" width="96" alt="直播摸鱼图标">
@@ -80,3 +84,7 @@ npm run dist
 请通过 [Issues](https://github.com/amount-chen/live-moyu/issues) 提交问题，附上版本、系统、操作步骤及错误提示。截图请遮挡个人信息；不要提交账号密码、Cookie 或 Token。
 
 本项目源码采用 [MIT License](LICENSE)。依赖软件保留各自许可证。
+
+## 联系方式
+
+B站UID：402801199  **醋酸地塞迷松**
