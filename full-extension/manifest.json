@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "直播摸鱼 · 悬浮输入连接器",
+  "version": "0.2.0",
+  "description": "连接 Windows 悬浮输入框与用户绑定的 B 站直播标签页。",
+  "permissions": [
+    "nativeMessaging",
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://live.bilibili.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "绑定直播间",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://live.bilibili.com/*"
+      ],
+      "js": [
+        "response.js",
+        "observer.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://live.bilibili.com/*"
+      ],
+      "js": [
+        "page.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyqrbkoqZp9D+1xYkAFZbFvNfW9mC4b9WLWoo27t7HAvRz1WHY7BwIS3MuQmpZcravj7QNpHRszNRYtqs2uEuH+0IittbxTBPiCk2+oIPej23w5vz+/jZ7dqUzZCCrcFttmJHFCbCj4vzf9khjJcOnYu7Uf1FnTK9XjyzNT+xHNX02vnDk9L/eSineo5XEChjl60r09zT6ac+HJhxelSiXl+9fpUu4LIvs2AVDzwxTOEBxcOFDiLOLl3ui2C5b/mGcycMa5cW2xAHC5XFHrOlH0tXPkprHQpHcPCqFMPe8gaUaoggtZZia9PyxWsOb4VeViaDhD2wbfG9ZLDfMYH7ewIDAQAB"
+}

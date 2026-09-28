@@ -1,0 +1,9 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'"><title>直播摸鱼</title><script src="theme-init.js"></script><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="theme.css"></head>
+<body><header><div class="brand"><span class="mark">聊</span><span>直播摸鱼</span></div><div class="window-actions"><button id="compact" title="切换为小窗">小窗</button><button id="theme" title="切换到深色模式" aria-label="切换到深色模式" aria-pressed="false">深色</button><button id="settings" title="设置">设置</button><button id="hide" title="收起（Esc）">×</button></div></header>
+<main id="composer"><div class="roomline"><span id="dot"></span><span id="room">尚未绑定直播间</span></div><p id="connection">先打开设置，完成连接</p>
+<textarea id="draft" maxlength="500" rows="3" aria-label="弹幕内容" placeholder="想说点什么？"></textarea>
+<button id="expand" title="恢复完整窗口" aria-label="恢复完整窗口">↗</button>
+<div class="bottom"><span id="shortcutHint">Ctrl+Alt+B 唤起 · Esc 收起</span><button id="send">发送 ↵</button></div>
+<p id="result" aria-live="polite"></p><button id="acknowledge" hidden>我已核对直播间，允许再次发送</button></main>
+<main id="preferences" hidden><label for="shortcut">唤起快捷键</label><div class="setting-row"><input id="shortcut" value="Control+Alt+B"><button id="saveShortcut">保存</button></div><p class="help">首次使用：在 Edge 的 edge://extensions 中加载下面的扩展文件夹，刷新直播页，然后点击连接器“绑定当前直播间”。</p><div class="setting-row"><button id="openExtension">打开扩展文件夹</button><button id="repair">重新注册连接</button></div><p id="settingResult" aria-live="polite"></p><p class="help">默认不开机自启。右下角托盘可退出程序。草稿只保存在内存中。</p></main>
+<script src="input-policy.js"></script><script src="renderer.js"></script></body></html>

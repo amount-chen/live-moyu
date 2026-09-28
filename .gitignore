@@ -1,0 +1,10 @@
+node_modules/
+.cache/
+dist/
+native/bin/
+*.log
+
+live-moyu-validation-*.zip
+.env
+.env.*
+!.env.example

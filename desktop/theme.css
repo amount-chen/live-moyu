@@ -1,0 +1,72 @@
+:root { color-scheme: light; }
+button:focus-visible { outline: 2px solid #adb7f5; outline-offset: 1px; }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  color: #d4d6db;
+  background: #202124;
+  --surface: #26272b;
+  --border: #44474e;
+  --muted: #9ba0aa;
+  --focus: #727f91;
+}
+[data-theme="dark"] body { border-color: #383a40; }
+[data-theme="dark"] header { background: var(--surface); border-bottom-color: #34363b; }
+[data-theme="dark"] button,
+[data-theme="dark"] .mark { background: #414953; color: #e0e4e9; }
+[data-theme="dark"] .window-actions button { background: transparent; color: #b5bac3; }
+[data-theme="dark"] button:hover { filter: brightness(1.12); }
+[data-theme="dark"] #dot { background: #737983; }
+[data-theme="dark"] #dot.online { background: #73a08e; }
+[data-theme="dark"] #connection,
+[data-theme="dark"] .help { color: var(--muted); }
+[data-theme="dark"] textarea,
+[data-theme="dark"] input { background: var(--surface); color: #d9dce2; border-color: var(--border); }
+[data-theme="dark"] textarea::placeholder { color: #969ca6; }
+[data-theme="dark"] textarea:focus,
+[data-theme="dark"] input:focus,
+[data-theme="dark"] button:focus-visible { outline-color: var(--focus); }
+[data-theme="dark"] #shortcutHint { color: #969ca6; }
+[data-theme="dark"] #result { color: #d7a291; }
+[data-theme="dark"] #acknowledge { background: #40332e; color: #e0b5a2; }
+[data-theme="dark"] #settingResult { color: #a8aeba; }
+
+#expand { display: none; }
+[data-compact="true"] body { border-radius: 8px; }
+[data-compact="true"] header,
+[data-compact="true"] #preferences,
+[data-compact="true"] .roomline,
+[data-compact="true"] #connection,
+[data-compact="true"] .bottom,
+[data-compact="true"] #result,
+[data-compact="true"] #acknowledge { display: none !important; }
+[data-compact="true"] #composer {
+  display: block !important;
+  position: relative;
+  height: 100%;
+  padding: 5px;
+  -webkit-app-region: drag;
+}
+[data-compact="true"] #draft {
+  display: block;
+  height: 100%;
+  padding: 12px 35px 10px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  line-height: 24px;
+  outline-width: 1px;
+}
+[data-compact="true"] #expand {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 17px;
+  width: 26px;
+  height: 28px;
+  padding: 0;
+  background: transparent;
+  color: #738099;
+  font-size: 18px;
+}
+[data-theme="dark"][data-compact="true"] #expand { color: #9ba0aa; }
+[data-compact="true"][data-attention="true"] #draft { border-color: #b98451; }
+[data-compact="true"][data-attention="true"] #expand { color: #b98451; }

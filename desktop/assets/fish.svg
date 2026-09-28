@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="250 250 754 754">
+  <!-- Shared outline traced from the approved fish: both icon families use this exact geometry. -->
+  <g fill="currentColor">
+    <path fill-rule="evenodd" d="M280 486 L424 602 C548 505 651 455 773 496 C859 525 923 572 976 630 C923 690 859 739 775 765 C655 804 548 753 424 660 L278 770 L307 631 Z M456 630 C564 545 664 499 766 537 C831 560 887 592 930 630 C885 676 831 707 766 726 C663 758 564 711 456 630 Z"/>
+    <circle cx="835" cy="612" r="22"/>
+  </g>
+</svg>

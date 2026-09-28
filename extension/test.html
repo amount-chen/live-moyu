@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>直播摸鱼 · 验证</title><link rel="stylesheet" href="test.css"></head>
+<body><main>
+  <header><span class="tag">最小验证版 · 0.1</span><h1>后台发一句弹幕</h1><p>测试文字将真实发送到绑定的直播间。</p></header>
+  <section><h2>目标直播间</h2><p id="room">正在读取…</p><p id="notice" class="warning"></p><p class="muted">绑定方法：在目标直播页点击扩展图标。刷新页面后需重新绑定。</p></section>
+  <label for="scenario">本次测试场景</label>
+  <select id="scenario"><option value="background">直播标签页在后台（切换到其他标签页）</option><option value="covered">Edge 被工作窗口遮挡</option><option value="minimized">Edge 最小化（包括此验证窗口）</option></select>
+  <label for="text">你自己选择的测试文字</label><textarea id="text" rows="3" maxlength="500" placeholder="输入一条适合这个直播间的弹幕"></textarea>
+  <details><summary>高级选项：自动识别失败时使用</summary><label for="inputSelector">输入框 CSS 选择器</label><input id="inputSelector" placeholder="留空自动识别 textarea"><label for="buttonSelector">发送按钮 CSS 选择器</label><input id="buttonSelector" placeholder="留空识别“发送”按钮"></details>
+  <div class="actions"><button id="probe" class="secondary">检查输入区</button><button id="send">10 秒后发送一次</button><button id="cancel" class="secondary" disabled>取消</button></div>
+  <section aria-live="polite"><h2>测试状态</h2><p id="status">尚未发送</p><p id="error" class="warning"></p><pre id="evidence"></pre>
+  <div id="verdict" hidden><p>切回直播间检查实际结果，再记录：</p><div class="actions"><button data-verdict="confirmed">看到了自己的弹幕</button><button data-verdict="not-seen" class="secondary">没有看到</button><button data-verdict="uncertain" class="secondary">无法确定</button></div></div></section>
+  <footer><button id="export" class="secondary">导出测试记录</button><span id="count">0 条记录</span><p>不自动重试，不读取 Cookie，不保存弹幕正文。关闭验证窗口不会取消已安排的发送，请使用“取消”。记录仅在本次浏览器会话保留。</p></footer>
+</main><script src="test.js"></script></body></html>

@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "直播摸鱼 · 后台发送验证",
+  "version": "0.1.0",
+  "description": "由用户手动验证 B 站直播后台发送，延迟发送并记录人工确认结果。",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://live.bilibili.com/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "绑定此直播间并打开验证窗口" },
+  "content_security_policy": { "extension_pages": "script-src 'self'; object-src 'none'" }
+}
